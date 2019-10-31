@@ -1,0 +1,271 @@
+title,score,id,subreddit,url,num_comments,body,created
+[D] Machine Learning - WAYR (What Are You Reading) - Week 73,23,dkox1s,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dkox1s/d_machine_learning_wayr_what_are_you_reading_week/,9,"This is a place to share machine learning research papers, journals, and articles that you're reading this week. If it relates to what you're researching, by all means elaborate and give us your insight, otherwise it could just be an interesting paper you've read.
+
+Please try to provide some insight from your understanding and please don't post things which are present in wiki.
+
+Preferably you should link the arxiv page (not the PDF, you can easily access the PDF from the summary page but not the other way around) or any other pertinent links.
+
+Previous weeks :
+
+|1-10|11-20|21-30|31-40|41-50|51-60|61-70|71-80|
+|----|-----|-----|-----|-----|-----|-----|-----|
+|[Week 1](https://www.reddit.com/4qyjiq)|[Week 11](https://www.reddit.com/57xw56)|[Week 21](https://www.reddit.com/60ildf)|[Week 31](https://www.reddit.com/6s0k1u)|[Week 41](https://www.reddit.com/7tn2ax)|[Week 51](https://reddit.com/9s9el5)|[Week 61](https://reddit.com/bfsx4z)|[Week 71](https://reddit.com/d7vno3)||||||
+|[Week 2](https://www.reddit.com/4s2xqm)|[Week 12](https://www.reddit.com/5acb1t)|[Week 22](https://www.reddit.com/64jwde)|[Week 32](https://www.reddit.com/72ab5y)|[Week 42](https://www.reddit.com/7wvjfk)|[Week 52](https://reddit.com/a4opot)|[Week 62](https://reddit.com/bl29ov)|[Week 72](https://reddit.com/de8h48)||
+|[Week 3](https://www.reddit.com/4t7mqm)|[Week 13](https://www.reddit.com/5cwfb6)|[Week 23](https://www.reddit.com/674331)|[Week 33](https://www.reddit.com/75405d)|[Week 43](https://www.reddit.com/807ex4)|[Week 53](https://reddit.com/a8yaro)|[Week 63](https://reddit.com/bqlb3v)||
+|[Week 4](https://www.reddit.com/4ub2kw)|[Week 14](https://www.reddit.com/5fc5mh)|[Week 24](https://www.reddit.com/68hhhb)|[Week 34](https://www.reddit.com/782js9)|[Week 44](https://reddit.com/8aluhs)|[Week 54](https://reddit.com/ad9ssz)|[Week 64](https://reddit.com/bw1jm7)||
+|[Week 5](https://www.reddit.com/4xomf7)|[Week 15](https://www.reddit.com/5hy4ur)|[Week 25](https://www.reddit.com/69teiz)|[Week 35](https://www.reddit.com/7b0av0)|[Week 45](https://reddit.com/8tnnez)|[Week 55](https://reddit.com/ai29gi)|[Week 65](https://reddit.com/c7itkk)||
+|[Week 6](https://www.reddit.com/4zcyvk)|[Week 16](https://www.reddit.com/5kd6vd)|[Week 26](https://www.reddit.com/6d7nb1)|[Week 36](https://www.reddit.com/7e3fx6)|[Week 46](https://reddit.com/8x48oj)|[Week 56](https://reddit.com/ap8ctk)|[Week 66](https://reddit.com/cd7gko)||
+|[Week 7](https://www.reddit.com/52t6mo)|[Week 17](https://www.reddit.com/5ob7dx)|[Week 27](https://www.reddit.com/6gngwc)|[Week 37](https://www.reddit.com/7hcc2c)|[Week 47](https://reddit.com/910jmh)|[Week 57](https://reddit.com/auci7c)|[Week 67](https://reddit.com/cj0kyc)||
+|[Week 8](https://www.reddit.com/53heol)|[Week 18](https://www.reddit.com/5r14yd)|[Week 28](https://www.reddit.com/6jgdva)|[Week 38](https://www.reddit.com/7kgcqr)|[Week 48](https://reddit.com/94up0g)|[Week 58](https://reddit.com/azjoht)|[Week 68](https://reddit.com/cp1jex)||
+|[Week 9](https://www.reddit.com/54kvsu)|[Week 19](https://www.reddit.com/5tt9cz)|[Week 29](https://www.reddit.com/6m9l1v)|[Week 39](https://www.reddit.com/7nayri)|[Week 49](https://reddit.com/98n2rt)|[Week 59](https://reddit.com/b50r5y)|[Week 69](https://reddit.com/cvde5a)||
+|[Week 10](https://www.reddit.com/56s2oa)|[Week 20](https://www.reddit.com/5wh2wb)|[Week 30](https://www.reddit.com/6p3ha7)|[Week 40](https://www.reddit.com/7qel9p)|[Week 50](https://reddit.com/9cf158)|[Week 60](https://reddit.com/bakew0)|[Week 70](https://reddit.com/d1g1k9)||
+
+Most upvoted papers two weeks ago:
+
+/u/MasterScrat: [Online Batch Selection for Faster Training of Neural Networks](https://arxiv.org/abs/1511.06343)
+
+/u/YoungStellarObject: [Layer-Wise Relevance Propagation paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0130140)
+
+Besides that, there are no rules, have fun.",1571630415.0
+[P] MelGAN vocoder implementation in PyTorch,62,dmdyat,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dmdyat/p_melgan_vocoder_implementation_in_pytorch/,11,"*Disclaimer: This is a third-party implementation. The original authors stated that they will be releasing code soon.*
+
+A recent research showed that fully-convolutional GAN called MelGAN can invert mel-spectrogram into raw audio in non-autoregressive manner. They showed that their MelGAN is lighter & faster than WaveGlow, and even can generalize to unseen speakers when trained on 3 male + 3 female speakers' speech.
+
+I thought this is a major breakthrough in TTS reserach, since both researchers and engineers can benefit from this fast & lightweight neural vocoder. So I've tried to implement this in PyTorch: see GitHub link w/ audio samples below.
+
+Debugging was quite painful while implementing this. Changing the update order of G/D mattered much, and my generator's loss curve is still going up. (Though results looks good when compared to original paper's.)
+
+* original paper:  [https://arxiv.org/abs/1910.06711](https://arxiv.org/abs/1910.06711)
+* implementation:  [https://github.com/seungwonpark/melgan](https://github.com/seungwonpark/melgan)
+* audio samples:  [http://swpark.me/melgan/](http://swpark.me/melgan/)
+* audio samples from original paper:  [https://melgan-neurips.github.io](https://melgan-neurips.github.io/)
+
+[Figure 1 from \\""MelGAN: Generative Adversarial Networks for Conditional Waveform Synthesis\\""](https://i.redd.it/vhshzlc8kgu31.png)",1571938307.0
+Curing HIV...This is where you come in. [Research] [Project],20,dmggms,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dmggms/curing_hivthis_is_where_you_come_in_research/,6,"I’m a viral immunologist at amfAR, The Foundation for AIDS Research. Our job is to cure HIV…. Which means we give money to scientists we think can help us achieve our goal. I’ve been working on an idea the past year to bring in data scientists to analyze existing HIV datasets to find predictors that could be useful in developing a cure. The idea has finally come to fruition in the form of [this](https://www.amfar.org/Magnet-Grants-RFP/) request for proposals.  
+
+I’d love your help to energize HIV cure research with the new data science approaches being developed in other fields. So if you are interested in **$150K/year to analyze your heart out and help us find a cure,** consider applying. If you need help finding an HIV cure researcher to partner with, message me.",1571952770.0
+[P] Quantum optical neural networks,248,dm36fh,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dm36fh/p_quantum_optical_neural_networks/,16,"Nanophotonic neural networks are an exciting emerging technology which promises low-energy, ultra high-throughput machine learning systems implemented purely optically. Our lab has [previously done work](https://www.reddit.com/r/MachineLearning/comments/b13yz6/p_neuroptica_a_nanophotonic_neural_network/) on these devices, and our new paper which extends programmable photonics to the quantum domain is now on arXiv!
+
+In this paper, we describe a photonic architecture for a quantum programmable gate array (QPGA) which can be dynamically reprogrammed to perform any quantum computation. We show how to exactly prepare arbitrary quantum states and operators on the device, and we apply machine learning techniques to automatically implement highly compact approximations to important quantum circuits.
+
+Below is an animation of a simulated QPGA being trained to implement a quantum Fourier transform on five qubits. Supplementary materials and the TensorFlow code for the quantum circuit optimization section of the paper can be found in the GitHub repository for the paper.
+
+**Paper:** [arxiv.org/abs/1910.10141](https://arxiv.org/abs/1910.10141)
+
+**GitHub repo:** [github.com/fancompute/qpga](https://github.com/fancompute/qpga)
+
+&#x200B;
+
+[Simulated QPGA learning to implement a 5-qubit quantum Fourier transform](https://reddit.com/link/dm36fh/video/yk6aop7m1cu31/player)",1571882987.0
+[R] Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer,30,dm9m33,MachineLearning,https://arxiv.org/abs/1910.10683,9,,1571910900.0
+[P] JoeyNMT: Minimalist neural machine translation for newbies written in Pytorch,4,dmgqzl,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dmgqzl/p_joeynmt_minimalist_neural_machine_translation/,0,"Our paper describing JoeyNMT was recently accepted at EMNLP so we thought it would be a good time to present our project to a larger community. Originally starting as a way to introduce students to neural machine translation methods without having to explain the intricacies of state of the art systems, JoeyNMT has now been in use for the past year now within our research group as a baseline system that is easily hackable and expandable. It has also found use Indaba Deep Learning school in Kenya and is a core tool used in the [masakhane.io](https://masakhane.io) project to train NMT on African Languages.
+
+Right now we have implemented
+
+*  RNNs (LSTM/GRU) and transformers for encoding and decoding
+* Multiple attention models (MLP, Dot, Multi-head, and bilinear)
+* character, word-level, and byte-pair encoded inputs
+* Greedy decoding and beam search
+
+Baseline models are available for English->{German, Latvian, Afrikaans, Zulu, Xitsonga, Northern Sotho, Setswana, isiZulu}
+
+We have a [github](https://github.com/joeynmt/joeynmt), [blog post](https://www.cl.uni-heidelberg.de/statnlpgroup/blog/joey/), and [paper](https://arxiv.org/pdf/1907.12484.pdf) for JoeyNMT.  We'd love to have more contributors and cover more language pairs.",1571954128.0
+[D] Kernel functions and neural networks,5,dmem79,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dmem79/d_kernel_functions_and_neural_networks/,4,"I’ve been pondering this question and wanted to get some of your thoughts on it.
+
+Kernel functions finds distances between two inputs relative to each other in some transformed space. Neural networks on the other hand finds the exact location of of the input in its transformed space.
+Are there benefit and downsides between the two transformations? Why are kernel functions used instead of specifying the direct transformation from input to transformed space",1571942753.0
+"[D] ML frameworks used at ICCV 20172019: PyTorch 3->253, Tensorflow 43->91, Caffe 108 -> 18",1,dmiba2,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dmiba2/d_ml_frameworks_used_at_iccv_20172019_pytorch/,2,"Perhaps the most surprising fact here is that there are still 18 papers using Caffe (not Caffe2!) in 2019. Also, interestingly, all of the papers using Caffe are from Chinese universities.",1571960988.0
+[R] Microsoft Research Face Swapping/deepfake + Hair (CVPR 2019),123,dlzh07,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dlzh07/r_microsoft_research_face_swappingdeepfake_hair/,23,"pdf: [http://openaccess.thecvf.com/content\_CVPR\_2019/papers/Gu\_Mask-Guided\_Portrait\_Editing\_With\_Conditional\_GANs\_CVPR\_2019\_paper.pdf](http://openaccess.thecvf.com/content_CVPR_2019/papers/Gu_Mask-Guided_Portrait_Editing_With_Conditional_GANs_CVPR_2019_paper.pdf)
+
+github repo: [https://github.com/cientgu/Mask\_Guided\_Portrait\_Editing](https://github.com/cientgu/Mask_Guided_Portrait_Editing)
+
+&#x200B;
+
+https://i.redd.it/o895carvnau31.png",1571866844.0
+[P] Implementing Neuro evolution to build Snake game AI,1,dmi7t7,MachineLearning,https://www.reddit.com/r/MachineLearning/comments/dmi7t7/p_implementing_neuro_evolution_to_build_snake/,0,"I  am trying to implement NEAT for the snake game. My game logic is ready,  which is working properly and NEAT configured. But even after 100  generations with population size of 200 per generation, the snakes perform very  poorly. I am using neat-python for this.
+
+The game board is 300x300 with grid size of 15. Hence, food and each part of the snake is of size 15x15. Hence, STEP = 15 for snake movement. The neural network has 24 inputs and 4 outputs and no hidden layer as part of the initial NEAT configuration. Activation function used is sigmoid.
+
+Below are the inputs:
+
+`snakeHeadX, snakeHeadY, snakeHeadBottomDist, snakeHeadRightDist, snakeTailX, snakeTailY, snakeLength, moveCount, moveToFood, food.x, food.y, foodBottomDist, foodRightDist, snakeFoodDistEuclidean, snakeFoodDistManhattan, viewDirections[0], viewDirections[1], viewDirections[2], viewDirections[3], viewDirections[4], viewDirections[5], viewDirections[6], viewDirections[7], deltaFoodDist`
+
+Here, viewDirections\[0\] - \[7\] denote what the snake finds looking in 8 different directions. In each direction, the snake will check for food and it's own body. If it finds neither food nor body, value for that direction will be 0, if it finds only food, it will be 1, if finds only body, it will be 2 and if both body and food is found, then value will be 3. I have attached the implementation to find viewDirections list below as well.
+
+The outputs are:
+
+output\[0\] --> for moving up, output\[1\] --> for moving down, output\[2\] --> for moving left, output\[3\] --> for moving right
+
+***The problem is the snake barely ever eats more than 2 food. The snake is unable to learn where the food is, reduce distance to food and ultimately eat it, but avoiding wall and the body at the same time. Need help if anyone here can guide me with what I am doing wrong, or what I am missing that I need to incorporate in this to make it work.***
+
+Below is the eval\_genome function:
+
+    ef main(genomes, config):
+        clock = pygame.time.Clock()
+        win = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
+        for genome_id, g in genomes:
+            net = neat.nn.FeedForwardNetwork.create(g, config)
+            g.fitness = 0
+            snake = Snake()
+            food = Food(snake.body)
+            run = True
+            UP = DOWN = RIGHT = LEFT = MOVE_SNAKE = False
+            moveToFood = 0
+            score = 0
+            moveCount = 0
+            while run:
+                clock.tick(90)
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        run = False
+                snakeHeadX = snake.body[0]['x']
+                snakeHeadY = snake.body[0]['y']
+                snakeTailX = snake.body[len(snake.body)-1]['x']
+                snakeTailY = snake.body[len(snake.body)-1]['y']
+                snakeLength = len(snake.body)
+                snakeHeadBottomDist = WIN_HEIGHT - snakeHeadY - STEP
+                snakeHeadRightDist = WIN_WIDTH - snakeHeadX - STEP
+                foodBottomDist = WIN_HEIGHT - food.y - STEP
+                foodRightDist = WIN_WIDTH - food.x - STEP
+                snakeFoodDistEuclidean = math.sqrt((snakeHeadX - food.x)**2 + (snakeHeadY - food.y)**2)
+                snakeFoodDistManhattan = abs(snakeHeadX - food.x) + abs(snakeHeadY - food.y)
+                viewDirections = snake.checkDirections(food, UP, DOWN, LEFT, RIGHT)
+                if not MOVE_SNAKE:
+                    deltaFoodDist = 0
+                
+                outputs = net.activate((snakeHeadX, snakeHeadY, snakeHeadBottomDist, snakeHeadRightDist, snakeTailX, snakeTailY, snakeLength, moveCount, moveToFood, food.x, food.y, foodBottomDist, foodRightDist, snakeFoodDistEuclidean, snakeFoodDistManhattan, viewDirections[0], viewDirections[1], viewDirections[2], viewDirections[3], viewDirections[4], viewDirections[5], viewDirections[6], viewDirections[7], deltaFoodDist))
+    
+                if (outputs[0] == max(outputs) and not DOWN):
+                    snake.setDir(0,-1)
+                    UP = True
+                    LEFT = False
+                    RIGHT = False
+                    MOVE_SNAKE = True
+                elif (outputs[1] == max(outputs) and not UP):
+                    snake.setDir(0,1)
+                    DOWN = True
+                    LEFT = False
+                    RIGHT = False
+                    MOVE_SNAKE = True
+                elif (outputs[2] == max(outputs) and not RIGHT):
+                    snake.setDir(-1,0)
+                    LEFT = True
+                    UP = False
+                    DOWN = False
+                    MOVE_SNAKE = True
+                elif (outputs[3] == max(outputs) and not LEFT):
+                    snake.setDir(1,0)
+                    RIGHT = True
+                    UP = False
+                    DOWN = False
+                    MOVE_SNAKE = True
+                elif (not MOVE_SNAKE):
+                    if (outputs[0] == max(outputs)):
+                        snake.setDir(0,-1)
+                        UP = True
+                        MOVE_SNAKE = True
+                    elif (outputs[1] == max(outputs)):
+                        snake.setDir(0,1)
+                        DOWN = True
+                        MOVE_SNAKE = True
+                    elif (outputs[2] == max(outputs)):
+                        snake.setDir(-1,0)
+                        LEFT = True
+                        MOVE_SNAKE = True
+                    elif (outputs[3] == max(outputs)):
+                        snake.setDir(1,0)
+                        RIGHT = True
+                        MOVE_SNAKE = True  
+    
+                win.fill((0, 0, 0))
+                food.showFood(win)
+                if(MOVE_SNAKE):
+                    snake.update()
+                    newSnakeHeadX = snake.body[0]['x']
+                    newSnakeHeadY = snake.body[0]['y']
+                    newFoodDist = math.sqrt((newSnakeHeadX - food.x)**2 + (newSnakeHeadY - food.y)**2)
+                    deltaFoodDist = newFoodDist - snakeFoodDistEuclidean
+                    moveCount += 1
+                    g.fitness += 0.01
+                    if (deltaFoodDist < 0):
+                        g.fitness += 5
+                    else:
+                        g.fitness -= 50
+                if(snake.collision()):
+                    if score != 0:
+                        print('FINAL SCORE IS: '+ str(score))
+                    g.fitness -= 300
+                    break
+                snake.show(win)
+                if(snake.eat(food,win)):
+                    g.fitness += 15
+                    score += 1
+                    if score == 1 :
+                        moveToFood = moveCount
+                    else:
+                        moveToFood = moveCount - moveToFood
+                    food.foodLocation(snake.body)
+                    food.showFood(win)
+
+Below is the checkDirections function implemented in Snake class which gives the viewDirections list as output:
+
+    def checkDirections(self, food, up, down, left, right):
+            '''
+            x+STEP, y-STEP
+            x+STEP, y+STEP
+            x-STEP, y-STEP
+            x-STEP, y+STEP
+            x+STEP, y
+            x, y-STEP
+            x, y+STEP
+            x-STEP, y
+    
+            '''
+            view = []
+            x = self.xdir
+            y = self.ydir
+            
+            view.append(self.check(x, y, STEP, -STEP, food.x, food.y))
+            view.append(self.check(x, y, STEP, STEP, food.x, food.y))
+            view.append(self.check(x, y, -STEP, -STEP, food.x, food.y))
+            view.append(self.check(x, y, -STEP, STEP, food.x, food.y))
+            view.append(self.check(x, y, STEP, 0, food.x, food.y))
+            view.append(self.check(x, y, 0, -STEP, food.x, food.y))
+            view.append(self.check(x, y, 0, STEP, food.x, food.y))
+            view.append(self.check(x, y, -STEP, 0, food.x, food.y))
+    
+            if up == True:
+                view[6] = -999
+            elif down == True:
+                view[5] = -999
+            elif left == True:
+                view[4] == -999
+            elif right == True:
+                view[7] == -999
+    
+            
+            return view
+            
+        def check(self, x, y, xIncrement, yIncrement, foodX, foodY):
+            value = 0
+            foodFound = False
+            bodyFound = False
+            while (x >= 0 and x < WIN_WIDTH and y >= 0 and y < WIN_HEIGHT):
+                x += xIncrement
+                y += yIncrement
+                if (not foodFound):
+                    if (foodX == x and foodY == y):
+                        foodFound = True
+                if (not bodyFound):
+                    for i in range(1, len(self.body)):
+                        if ((x == self.body[i]['x']) and (y == self.body[i]['y'])):
+                            bodyFound = True
+                if (not bodyFound and not foodFound):
+                    value = 0
+                elif (not bodyFound and foodFound):
+                    value = 1
+                elif (bodyFound and not foodFound):
+                    value = 2
+                else:
+                    value = 3
+            return value",1571960578.0
